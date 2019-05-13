@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('services');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/upload', 'UploadController@upload');
+Route::post('/upload/proses', 'UploadController@proses_upload');
