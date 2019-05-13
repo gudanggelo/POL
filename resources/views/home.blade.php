@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Login Status</div>
+                <div class="card-header">Beranda</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Login berhasil !
+                    Kamu telah login!
                 </div>
             </div>
         </div>

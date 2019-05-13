@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="{{ asset('blog/img/favicon.png') }}" type="image/png">
-	<title>POL !</title>
+	<title>POL</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="{{ asset('blog/css/bootstrap.css') }}">
 	<link rel="stylesheet" href="{{ asset('blog/vendors/linericon/style.css') }}">
@@ -39,32 +39,17 @@
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-center">
 							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="{!! asset('views/services.blade.php'); !!}">Upload</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Blog</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="price.html">Upload</a></li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
 						</ul>
-<<<<<<< HEAD
 						<div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-=======
-						 @if (Route::has('login'))
->>>>>>> 41c3a95aba985788ce7912c410577045843b1eea
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">{{ Auth::user()->name }}</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-<<<<<<< HEAD
-=======
 
->>>>>>> 41c3a95aba985788ce7912c410577045843b1eea
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
