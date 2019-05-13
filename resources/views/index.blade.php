@@ -50,13 +50,21 @@
 							</li>
 							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 						</ul>
+<<<<<<< HEAD
 						<div class="flex-center position-ref full-height">
             @if (Route::has('login'))
+=======
+						 @if (Route::has('login'))
+>>>>>>> 41c3a95aba985788ce7912c410577045843b1eea
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">{{ Auth::user()->name }}</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 41c3a95aba985788ce7912c410577045843b1eea
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
