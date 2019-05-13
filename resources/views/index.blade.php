@@ -50,9 +50,19 @@
 							</li>
 							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="#" class="primary_btn text-uppercase">Login / SignUp</a></li>
-						</ul>
+						<div class="flex-center position-ref full-height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">{{ Auth::user()->name }}</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
 					</div>
 				</div>
 			</nav>
@@ -125,6 +135,21 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="price_item">
 						<div class="price_head">
+							<h4>Cetak Photo</h4>
+						</div>
+						<div class="price_body">
+							<ul class="list">
+								<li>Kenanglah momen terbaikmu dengan <br> pilihan dari POL</li>
+							</ul>
+						</div>
+						<div class="price_footer">
+							<h3>SEGERA</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="price_item">
+						<div class="price_head">
 							<h4>Cetak Dokumen Biasa</h4>
 						</div>
 						<div class="price_body">
@@ -136,21 +161,6 @@
 							<h3>MULAI</h3>
 							<h4>2000 Rupiah<br></h4>
 							<a class="primary_btn" href="#"><span>Print Sekarang!</span></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="price_item">
-						<div class="price_head">
-							<h4>Cetak Photo</h4>
-						</div>
-						<div class="price_body">
-							<ul class="list">
-								<li>Kenanglah momen terbaikmu dengan <br> pilihan dari POL</li>
-							</ul>
-						</div>
-						<div class="price_footer">
-							<h3>SEGERA</h3>
 						</div>
 					</div>
 				</div>
