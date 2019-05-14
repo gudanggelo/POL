@@ -1,4 +1,4 @@
-i<!doctype html>
+<!doctype html>
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -27,7 +27,7 @@ i<!doctype html>
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container box_1620">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand logo_h" href="index.html"><img src="{{ asset('blog/img/logo.png') }}" alt=""></a>
+						<a class="navbar-brand logo_h" href="/"><img src="{{ asset('blog/img/logo.png') }}" alt=""></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -36,9 +36,9 @@ i<!doctype html>
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav justify-content-center">
-								<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
-								<li class="nav-item"><a class="nav-link" href="services.html">Upload</a></li>
-								<li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+								<li class="nav-item active"><a class="nav-link" href="/">Home</a></li> 
+								<li class="nav-item"><a class="nav-link" href="upload">Upload</a></li>
+								<li class="nav-item"><a class="nav-link" href="contact">Kontak</a></li>
 							</ul>
 						</div> 
 						<div class="flex-center position-ref full-height">
@@ -76,6 +76,38 @@ i<!doctype html>
             </div>
         </section>
         <!--================End Home Banner Area =================-->
+<!-- form upload -->
+
+	<div class="row">
+		<div class="container">
+			<div class="col-lg-8 mx-auto my-5">	
+ 
+				@if(count($errors) > 0)
+				<div class="alert alert-danger">
+					@foreach ($errors->all() as $error)
+					{{ $error }} <br/>
+					@endforeach
+				</div>
+				@endif
+ 
+				<form action="/upload/proses" method="POST" enctype="multipart/form-data">
+					{{ csrf_field() }}
+ 
+					<div class="form-group">
+						<b>File Gambar</b><br/>
+						<input type="file" name="file">
+					</div>
+ 
+					<div class="form-group">
+						<b>Keterangan</b>
+						<textarea class="form-control" name="keterangan"></textarea>
+					</div>
+ 
+					<input type="submit" value="Upload" class="btn btn-primary">
+				</form>
+			</div>
+		</div>
+	</div>
 
 	<!-- selesai form nya -->
 	<!--================Footer Area =================-->

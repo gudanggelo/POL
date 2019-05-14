@@ -24,24 +24,24 @@
 
 	<!--================Header Menu Area =================-->
 	<header class="header_area">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="{{ asset('blog/img/logo.png') }}" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav justify-content-center">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="price.html">Upload</a></li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
-						</ul>
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="/"><img src="{{ asset('blog/img/logo.png') }}" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav justify-content-center">
+								<li class="nav-item active"><a class="nav-link" href="/">Home</a></li> 
+								<li class="nav-item"><a class="nav-link" href="upload">Upload</a></li>
+								<li class="nav-item"><a class="nav-link" href="contact">Kontak</a></li>
+							</ul>
+						</div> 
 						<div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -49,7 +49,6 @@
                         <a href="{{ url('/home') }}">{{ Auth::user()->name }}</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
@@ -78,7 +77,7 @@
 								Kami memahami anda membutuhkan sesuatu yang efisien dan dapat meningkatkan produktifitas anda. POL menawarkan anda kemudahan dalam mencetak berbagai macam dokumen. Mulai dari tugas kuliah hingga cetak spanduk besar dengan cepat dan nyaman tentunya.
 							</p>
 							<div class="d-flex align-items-center">
-								<a class="primary_btn" href="#"><span>Cetak Sekarang!</span></a>
+								<a class="primary_btn" href="upload"><span>Cetak Sekarang!</span></a>
 							</div>
 						</div>
 					</div>
@@ -106,7 +105,7 @@
 							Kami menyediakan berbagai produk dan jenis printing, mulai dari cetak foto-foto personal, cetak karya seni, dan percetakan untuk bisnis, semuanya berbasis online. 
 							Anda tidak perlu membuang waktu untuk pergi ke percetakan dan mengantri selama berjam-jam, dengan POL sekarang semuanya mudah, cepat, dan tak perlu repot. 
 						</p>
-						<a href="#" class="primary_btn"><span>Cetak Sekarang!</span></a>
+						<a href="/upload" class="primary_btn"><span>Cetak Sekarang!</span></a>
 					</div>
 				</div>
 			</div>
@@ -153,7 +152,7 @@
 						<div class="price_footer">
 							<h3>MULAI</h3>
 							<h4>2000 Rupiah<br></h4>
-							<a class="primary_btn" href="#"><span>Print Sekarang!</span></a>
+							<a class="primary_btn" href="/upload"><span>Print Sekarang!</span></a>
 						</div>
 					</div>
 				</div>

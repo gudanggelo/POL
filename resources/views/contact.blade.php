@@ -37,9 +37,9 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-center">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="price.html">Upload</a></li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+							<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="upload">Upload</a></li>
+							<li class="nav-item"><a class="nav-link" href="contact">Kontak</a></li>
 						</ul>
 						<div class="flex-center position-ref full-height">
             @if (Route::has('login'))
