@@ -162,57 +162,59 @@ select{
         </section>
         <!--================End Home Banner Area =================-->
 <!-- form upload -->
-<form>
+<form action="/upload/proses" method="POST" enctype="multipart/form-data">
+{{ csrf_field() }}
 <ul class="form-style-1">
-    <li><label>Nama<span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="Nama" /> </li>
+    <li><label>Nama<span class="required">*</span></label><input type="text" name="nama" class="field-divided" placeholder="Nama" /> </li>
     <li>
         <label>Email <span class="required">*</span></label>
-        <input type="email" name="field3" class="field-long" />
+        <input type="email" name="email" class="field-long" />
     </li>
     <li>
         <label>Jenis Lembar Dokumen</label>
-        <select name="field4" class="field-select">
-        <option value="Advertise">A4</option>
-        <option value="Partnership">A3</option>
-        <option value="General Question">F4</option>
+        <select name="jenis_lembar_dokumen" class="field-select">
+        <option value="A4">A4</option>
+        <option value="A3">A3</option>
+        <option value="F4">F4</option>
         </select>
+    </li>
+	<li>
+        <label>Jumlah <span class="required">*</span></label>
+        <textarea name="jumlah_lembar" id="field5" class="field-long field-textarea"></textarea>
     </li>
     <li>
         <label>Alamat <span class="required">*</span></label>
-        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+        <textarea name="alamat" id="field5" class="field-long field-textarea"></textarea>
     </li>
+	<li><label>Jenis warna</label>
+		<select name="keterangan" class="field-select">
+		<option value="warna">warna</option>
+		<option value="hitam putih">hitam putih</option>
+		</select>
+	</li>
+	<li class="col-lg-8 mx-auto my-5">
+		@if(count($errors) > 0)
+		<div class="alert alert-danger">
+			@foreach ($errors->all() as $error)
+			{{ $error }} <br/>
+			@endforeach
+		</div>
+		@endif
+  
+		<div class="form-group">
+			<b>File PDF WAJIB</b><br/>
+			<input type="file" name="file">
+		</div>
+	</li>
+	<button type="submit" value="Upload" class="btn btn-primary">Upload</button>
 </ul>
-</form>
-	<div class="row">
-		<div class="container">
-			<div class="col-lg-8 mx-auto my-5">	
- 
-				@if(count($errors) > 0)
-				<div class="alert alert-danger">
-					@foreach ($errors->all() as $error)
-					{{ $error }} <br/>
-					@endforeach
-				</div>
-				@endif
- 
-				<form action="/upload/proses" method="POST" enctype="multipart/form-data">
-					{{ csrf_field() }}
- 
-					<div class="form-group">
-						<b>File PDF WAJIB</b><br/>
-						<input type="file" name="file">
-					</div>
- 
-					<div class="form-group">
-						<b>Keterangan</b>
-						<textarea class="form-control" name="keterangan"></textarea>
-					</div>
- 
-					<input type="submit" value="Upload" class="btn btn-primary">
-				</form>
-			</div>
+
+
+					
+			</form>
 		</div>
 	</div>
+</div>
 
 	<!-- selesai form nya -->
 	<!--================Footer Area =================-->

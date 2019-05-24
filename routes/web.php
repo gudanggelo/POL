@@ -11,20 +11,28 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/upload', function () {
-    return view('upload');
-});
 
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/harga', function () {
+    return view('harga');
+})->name('harga');
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('index');
+Route::group(['middleware'=>['auth','user']],function(){
+    Route::get('/upload', 'UploadController@upload');
+    Route::post('/upload/proses', 'UploadController@kirimfile');
+});
+Route::group(['middleware'=>['auth','admin']],function(){
+    
+});
 
-Route::get('/upload', 'UploadController@upload');
-Route::post('/upload/proses', 'UploadController@proses_upload');
+Route::get('/home', 'HomeController@index')->name('index');

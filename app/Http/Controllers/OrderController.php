@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Order
-use App\User
+use App\Order;
+use App\User;
 class OrderController extends Controller
 {
     public function upload(){

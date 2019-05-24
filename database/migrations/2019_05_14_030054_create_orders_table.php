@@ -15,16 +15,15 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('path');
-            $table->boolean('warna');
-            $table->integer('harga');
-            $table->integer('size');
-            $table->string('keterangan');
+            $table->bigInteger('user_id');
+            $table->string('nama');
+            $table->string('email');
+            $table->enum('jenis_lembar_dokumen',['A4','A3','F4']);
+            $table->integer('jumlah_lembar');
+            $table->string('alamat');   
+            $table->enum('keterangan',['warna','hitam putih']);
+            $table->string('file');
             $table->timestamps();
-            $table->foreign('user_id')
-            ->references('id')
-            ->on('users')
-            ->onDelete('cascade');
         });
     }
 

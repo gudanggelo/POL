@@ -37,6 +37,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function isUser(){
+        return $this->user;
+    }
+    public function isAdmin(){
+        return $this->admin;
+    }
     public function Order()
     {
         return $this->hasMany('App\Order');
