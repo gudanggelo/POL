@@ -29,9 +29,9 @@ class HomeController extends Controller
         if($user->admin==1){
             return view('home');
         }
-       else if ($user->user==1){
+        if($user->user==1){
            return view('home');
        }
-       return "error";
+       else return "error";
     }
 }

@@ -68,11 +68,7 @@
                 <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
                 <div class="container">
                     <div class="banner_content text-left">
-                        <div class="page_link">
-                            <a href="index.html">Home</a>
-                            <a href="contact.html">Contact</a>
-                        </div>
-                        <h2>Contact Us</h2>
+                        <h2>Hubungi kami</h2>
                     </div>
                 </div>
             </div>
@@ -82,14 +78,6 @@
         <!--================Contact Area =================-->
         <section class="contact_area section_gap">
             <div class="container">
-                <div id="mapBox" class="mapBox" 
-                    data-lat="-6.5602475" 
-                    data-lon="106.7255917" 
-                    data-zoom="13" 
-                    data-info="Kampus IPB Dramaga, Jl. Raya Dramaga, Babakan, Dramaga, Babakan, Dramaga, Bogor, Jawa Barat 16680"
-                    data-mlat="-6.5602475"
-                    data-mlon="106.7255917">
-                </div>
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="contact_info">
@@ -100,38 +88,14 @@
                             </div>
                             <div class="info_item">
                                 <i class="lnr lnr-phone-handset"></i>
-                                <h6><a href="#">00 (440) 9865 562</a></h6>
+                                <h6><a href="#">0895 1620 5634</a></h6>
                                 <p>Mon to Fri 9am to 6 pm</p>
                             </div>
                             <div class="info_item">
                                 <i class="lnr lnr-envelope"></i>
-                                <h6><a href="#">support@colorlib.com</a></h6>
-                                <p>Send us your query anytime!</p>
+                                <h6><a href="#">support@pol.com</a></h6>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-12 text-right">
-                                <button type="submit" value="submit" class="primary_btn"><span>Send Message</span></button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -139,54 +103,57 @@
         <!--================Contact Area =================-->
         
         <!--================Footer Area =================-->
-        <footer class="footer_area section_gap">
-        	<div class="container">
-        		<div class="row footer_inner">
-        			<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget ab_widget">
-        					<div class="f_title">
-        						<h3>About Me</h3>
-        					</div>
-        					<p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills,</p>
-        					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        <footer class="footer_area">
+		<div class="container">
+			<div class="row footer_inner">
+				<div class="col-lg-5 col-sm-6">
+					<aside class="f_widget ab_widget">
+						<div class="f_title">
+							<h3>POL</h3>
+							<h4>Solusi Handal Dokumen Anda</h4>
+						</div>
+						
+						<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |This Build made by <a href="http://www.instagram.com/taufikhidaayat" target="_blank">Taufik Hidayat</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-        				</aside>
-        			</div>
-        			<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget news_widget">
-        					<div class="f_title">
-        						<h3>Newsletter</h3>
-        					</div>
-        					<p>Stay updated with our latest trends</p>
-        					<div id="mc_embed_signup">
-                                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                	<div class="input-group d-flex flex-row">
-                                        <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                        <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>		
-                                    </div>				
-                                    <div class="mt-10 info"></div>
-                                </form>
-                            </div>
-        				</aside>
-        			</div>
-        			<div class="col-lg-2">
-        				<aside class="f_widget social_widget">
-        					<div class="f_title">
-        						<h3>Follow Me</h3>
-        					</div>
-        					<p>Let us be social</p>
-        					<ul class="list">
-        						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-        						<li><a href="#"><i class="fa fa-behance"></i></a></li>
-        					</ul>
-        				</aside>
-        			</div>
-        		</div>
-        	</div>
-        </footer>
+					</aside>
+				</div>
+				<div class="col-lg-5 col-sm-6">
+					<aside class="f_widget news_widget">
+						<div class="f_title">
+							<h3>Newsletter</h3>
+						</div>
+						<p>Berlangganan info menarik kami!</p>
+						<div id="mc_embed_signup">
+							<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+							 method="get" class="subscribe_form relative">
+								<div class="input-group d-flex flex-row">
+									<input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '"
+									 required="" type="email">
+									<button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>
+								</div>
+								<div class="mt-10 info"></div>
+							</form>
+						</div>
+					</aside>
+				</div>
+				<div class="col-lg-2">
+					<aside class="f_widget social_widget">
+						<div class="f_title">
+							<h3>Follow Me</h3>
+						</div>
+						<p>Let us be social</p>
+						<ul class="list">
+							<li><a href="http://www.facebook.com/taufikhidayatkeren"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/taufikhidaayat"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+							<li><a href="#"><i class="fa fa-behance"></i></a></li>
+						</ul>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</footer>
         <!--================End Footer Area =================-->
         
         <!--================Contact Success and Error message Area =================-->
