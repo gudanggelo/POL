@@ -185,7 +185,8 @@
     								<td class="no-line text-right">{{$order->jumlah_lembar * $harga+5000}}</td>
     							</tr>
     						</tbody>
-    					</table>Catatan : Screenshoot invoice ini kirimkan invoice ini 
+    					</table>Catatan : Pembayaran melalui rekening BNI 0304827263 atas nama Taufik Hidayat
+						<br>Screenshoot invoice ini kirimkan invoice ini 
 										  <br>beserta bukti pembayaran ke WA 
     				</div>
     			</div>
