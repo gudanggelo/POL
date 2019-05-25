@@ -84,6 +84,7 @@
 	  <th scope="col">alamat</th>
 	  <th scope="col">warna</th>
 	  <th scope="col">file</th>
+	  <th scope="col">waktu</th>
     </tr>
   </thead>
   <tbody>
@@ -98,6 +99,7 @@
 		<td>{{$order->alamat}}</td>
 		<td>{{$order->keterangan}}</td>
 		<td>{{$order->file}}</td>
+		<td>{{$order->updated_at}}</td>
 	</tr>
 	<?php $i = $i + 1?>
 @endforeach
