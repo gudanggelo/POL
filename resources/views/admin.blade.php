@@ -37,8 +37,7 @@
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav justify-content-center">
 								<li class="nav-item active"><a class="nav-link" href="/">Home</a></li> 
-								<li class="nav-item"><a class="nav-link" href="upload">Upload</a></li>
-								<li class="nav-item"><a class="nav-link" href="contact">Kontak</a></li>
+								<li class="nav-item"><a class="nav-link" href="history">Pemesanan</a></li>
 							</ul>
 						</div> 
 						<div class="flex-center position-ref full-height">
