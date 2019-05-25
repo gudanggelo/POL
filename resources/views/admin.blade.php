@@ -1,90 +1,5 @@
 <!doctype html>
 <html lang="en">
-<style type="text/css">
-.form-style-1 {
-	margin:10px auto;
-	max-width: 400px;
-	padding: 20px 12px 10px 20px;
-	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
-.form-style-1 li {
-	padding: 0;
-	display: block;
-	list-style: none;
-	margin: 10px 0 0 0;
-}
-.form-style-1 label{
-	margin:0 0 3px 0;
-	padding:0px;
-	display:block;
-	font-weight: bold;
-}
-.form-style-1 input[type=text], 
-.form-style-1 input[type=date],
-.form-style-1 input[type=datetime],
-.form-style-1 input[type=number],
-.form-style-1 input[type=search],
-.form-style-1 input[type=time],
-.form-style-1 input[type=url],
-.form-style-1 input[type=email],
-textarea, 
-select{
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	border:1px solid #BEBEBE;
-	padding: 7px;
-	margin:0px;
-	-webkit-transition: all 0.30s ease-in-out;
-	-moz-transition: all 0.30s ease-in-out;
-	-ms-transition: all 0.30s ease-in-out;
-	-o-transition: all 0.30s ease-in-out;
-	outline: none;	
-}
-.form-style-1 input[type=text]:focus, 
-.form-style-1 input[type=date]:focus,
-.form-style-1 input[type=datetime]:focus,
-.form-style-1 input[type=number]:focus,
-.form-style-1 input[type=search]:focus,
-.form-style-1 input[type=time]:focus,
-.form-style-1 input[type=url]:focus,
-.form-style-1 input[type=email]:focus,
-.form-style-1 textarea:focus, 
-.form-style-1 select:focus{
-	-moz-box-shadow: 0 0 8px #88D5E9;
-	-webkit-box-shadow: 0 0 8px #88D5E9;
-	box-shadow: 0 0 8px #88D5E9;
-	border: 1px solid #88D5E9;
-}
-.form-style-1 .field-divided{
-	width: 49%;
-}
-
-.form-style-1 .field-long{
-	width: 100%;
-}
-.form-style-1 .field-select{
-	width: 100%;
-}
-.form-style-1 .field-textarea{
-	height: 100px;
-}
-.form-style-1 input[type=submit], .form-style-1 input[type=button]{
-	background: #4B99AD;
-	padding: 8px 15px 8px 15px;
-	border: none;
-	color: #fff;
-}
-.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
-	background: #4691A4;
-	box-shadow:none;
-	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
-}
-.form-style-1 .required{
-	color:red;
-}
-</style>
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -152,71 +67,45 @@ select{
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 				<div class="container">
 					<div class="banner_content text-center">
-						<h2>Upload</h2>
-						<div class="page_link">
-							
-						</div>
+						<h2>History Pemesanan</h2>
+					
 					</div>
 				</div>
             </div>
         </section>
+		<section>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Nama Pemesan</th>
+      <th scope="col">email</th>
+	  <th scope="col">jenis</th>
+	  <th scope="col">jumlah</th>
+	  <th scope="col">alamat</th>
+	  <th scope="col">warna</th>
+	  <th scope="col">file</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php $i = 1?>
+  @foreach($orders as $order)
+    <tr>
+		<td>{{$i}}</td>
+		<td>{{$order->nama}}</td>
+		<td>{{$order->email}}</td>
+		<td>{{$order->jenis_lembar_dokumen}}</td>
+		<td>{{$order->jumlah_lembar}}</td>
+		<td>{{$order->alamat}}</td>
+		<td>{{$order->keterangan}}</td>
+		<td>{{$order->file}}</td>
+	</tr>
+	<?php $i = $i + 1?>
+@endforeach
+  </tbody>
+</table>
+</section>
         <!--================End Home Banner Area =================-->
-<!-- form upload -->
-<form action="/upload/proses" method="POST" enctype="multipart/form-data">
-{{ csrf_field() }}
-<ul class="form-style-1">
-    <li><label>Nama<span class="required">*</span></label><input type="text" name="nama" class="field-divided" placeholder="Nama" /> </li>
-    <li>
-        <label>Email <span class="required">*</span></label>
-        <input type="email" name="email" class="field-long" />
-    </li>
-    <li>
-        <label>Jenis Lembar Dokumen</label>
-        <select name="jenis_lembar_dokumen" class="field-select">
-        <option value="A4">A4</option>
-        <option value="A3">A3</option>
-        <option value="F4">F4</option>
-        </select>
-    </li>
-	<li>
-        <label>Jumlah <span class="required">*</span></label>
-        <input type="number" name="jumlah_lembar" id="field5" class="form-control">
-    </li>
-    <li>
-        <label>Alamat <span class="required">*</span></label>
-        <textarea name="alamat" id="field5" class="field-long field-textarea"></textarea>
-    </li>
-	<li><label>Jenis warna</label>
-		<select name="keterangan" class="field-select">
-		<option value="warna">warna</option>
-		<option value="hitam putih">hitam putih</option>
-		</select>
-	</li>
-	<li class="col-lg-8 mx-auto my-5">
-		@if(count($errors) > 0)
-		<div class="alert alert-danger">
-			@foreach ($errors->all() as $error)
-			{{ $error }} <br/>
-			@endforeach
-		</div>
-		@endif
-  
-		<div class="form-group">
-			<b>File PDF WAJIB</b><br/>
-			<input type="file" name="file">
-		</div>
-	</li>
-	<button type="submit" value="Upload" class="btn btn-primary">Upload</button>
-</ul>
-
-
-					
-			</form>
-		</div>
-	</div>
-</div>
-
-	<!-- selesai form nya -->
 	<!--================Footer Area =================-->
 	<footer class="footer_area">
 		<div class="container">

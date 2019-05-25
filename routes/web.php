@@ -32,7 +32,7 @@ Route::group(['middleware'=>['auth','user']],function(){
     Route::post('/upload/proses', 'UploadController@kirimfile');
 });
 Route::group(['middleware'=>['auth','admin']],function(){
-    
+    Route::get('/history', 'AdminController@history');
 });
 
 Route::get('/home', 'HomeController@index')->name('index');
