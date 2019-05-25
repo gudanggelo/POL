@@ -190,6 +190,7 @@
     				</div>
     			</div>
     		</div>
+			<center><a href="https://api.whatsapp.com/send?phone=6289516205634&amp;text=Halo%20Admin,%20Saya%20mau%20konfirmasi%20pemesanan....."><img src="https://lh3.googleusercontent.com/-N23V4qsFKs8/WMV9mGK5x5I/AAAAAAAAAPQ/BcC6qzLzJtcqKUWAX5TXX8KxuwDX5JXAgCLcB/h90/Button%2BChat%2Bvia%2BWhatsapp.png" style="    max-width: 100%;" / /></a></center>
     	</div>
     </div>
 </div>

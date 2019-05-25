@@ -151,7 +151,7 @@
 						</div>
 						<div class="price_footer">
 							<h3>MULAI</h3>
-							<h4>2000 Rupiah<br></h4>
+							<h4>500 Rupiah<br></h4>
 							<a class="primary_btn" href="/upload"><span>Print Sekarang!</span></a>
 						</div>
 					</div>
